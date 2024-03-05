@@ -59,7 +59,7 @@ class MainTest {
     @Test
     public void parseDoubleShouldNotWorkWithMinusInRandomPlaces() {
         try {
-            double value = Main.parseDouble("123-45");
+            double value = Main.parseDouble("12-.345");
             Assertions
                     .fail("Parse Double non può tornare un valore in caso di stringhe con - in posizioni non corrette");
         } catch (IllegalArgumentException e) {
@@ -84,5 +84,6 @@ class MainTest {
         } catch (IllegalArgumentException e) {
         }
     }
+    
 
 }
